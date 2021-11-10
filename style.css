@@ -47,7 +47,7 @@ body {
     color: #616161;
     margin: 0;
     }
-    .section-text span {
+.section-text span {
         color: #fb973b;
     }
 /*styles for header */
@@ -76,8 +76,13 @@ body {
     text-decoration: none;
     color: #616161;
     margin-right: 70px;
+    transition: color 0.3s linear;
   
 }
+.nav-item:hover {
+    color:#fb973b;
+}
+
 .nav-item:last-child {
     margin-right: 0;
 }
@@ -93,6 +98,10 @@ body {
     text-decoration: none;
     color: #141419;
     font-weight: bold;
+    transition: font-size 0.5s linear;
+  }
+  .tel-container a:hover {
+      font-size: 1.2em;
   }
   /* styles for promo section */
 .promo {
@@ -104,7 +113,6 @@ body {
     position: relative;
 }
 .promo-content-wrapper {
-   
     display: flex;
     flex-direction: column;
 
@@ -114,22 +122,10 @@ body {
      margin: 85px 0 30px;
 }
 
-/* .promo-heading::after {
-    content: "";
-    width: 656px;
-    height: 10px;
-    background: url(img/promo-line1.png) no-repeat;
-    background-position: 20px 0;
-    position: absolute;
-    left: 0;
-    top: 47px;
-} */
-
 .promo-content-wrapper .section-text {
     margin-bottom: 50px;
     width: 334px;
 }
-
 
 .promo-form-wrapper {
     width: 391px;
@@ -142,13 +138,19 @@ grid-template-rows: 57px;
 .promo-form-tel {
     background-color: #f8f8f8;
     color: #616161;
-    
-    padding: 0 10px;
+        padding: 0 10px;
+}
+.promo-form-tel:hover {
+    border-color: #000;
 }
 .promo-form-btn {
     background-color: #fb973b;
     color: #fff;
    padding: 0 20px;
+}
+.promo-form-btn:hover {
+    cursor: pointer;
+    color: #141419;
 }
 .promo-img-wrapper {
     position: absolute;
