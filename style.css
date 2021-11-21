@@ -30,6 +30,14 @@ body {
     margin: 0 auto;
    
 }
+img {
+    max-width: 100%;
+    
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
 /* other general styles */
 .section-heading {
     font-size: 60px;
@@ -66,9 +74,7 @@ body {
     height: 66px;
     margin-right: 80px;
 }
-.main-logo {
-    width: 100%;
-}
+
 .main-nav {
     display: flex;
     justify-content: center;
@@ -76,19 +82,20 @@ body {
     flex-wrap: wrap;
     }
 .nav-item {
-    text-decoration: none;
-    color: #616161;
     margin-right: 70px;
     transition: all 0.3s linear;
-  
+  }
+  .nav-item:last-child {
+    margin-right: 0;
 }
+
 .nav-item:hover {
     color:#fb973b;
 }
-
-.nav-item:last-child {
-    margin-right: 0;
+.nav-item:focus {
+    outline: 1px solid #fb973b;
 }
+
 .tel-container {
     width: 120px;
     height: 66px;
@@ -98,13 +105,13 @@ body {
     align-items: center;
 }
 .tel-container a{
-    text-decoration: none;
-    color: #141419;
     font-weight: bold;
-    transition: font-size 0.5s linear;
+    transition: all 0.3s linear;
   }
   .tel-container a:hover {
       font-size: 1.2em;
+      text-decoration: underline;
+      text-decoration-color: #fb973b;
   }
   /* styles for promo section */
 .promo {
@@ -119,7 +126,7 @@ body {
 .promo-content-wrapper {
     display: flex;
     flex-direction: column;
-
+    /* width: 350px; */
 }
 
 .promo-content-wrapper .section-heading {
@@ -147,14 +154,22 @@ grid-template-rows: 57px;
 .promo-form-tel:hover {
     border-color: #000;
 }
+.promo-form-tel:focus {
+    outline: 2px solid #fb973b;
+}
 .promo-form-btn {
     background-color: #fb973b;
     color: #fff;
    padding: 0 20px;
+   transition: font-size 0.3s ease;
 }
 .promo-form-btn:hover {
     cursor: pointer;
     color: #141419;
+    font-size: 1.15rem;
+}
+.promo-form-btn:focus {
+    outline: 2px solid #141419;
 }
 .promo-img-wrapper {
     position: absolute;
@@ -163,9 +178,7 @@ grid-template-rows: 57px;
     width: 993px;
     height: 738px;
     }
-.promo-img {
-    width: 100%;
-}
+
 /*styles for about-us section*/ 
 
 .about-us {
@@ -198,7 +211,6 @@ grid-template-rows: 57px;
 }
 .about-us-img {
     grid-area: picture;
-   
     width: 100%;
     height: 100%;
 }
@@ -220,19 +232,18 @@ grid-template-rows: 57px;
 }
 .about-us-item-2 {
     grid-area: item2;
-  
-}
+  }
 .about-us-item-3 {
     grid-area: item3;
 }
-/*  styles for parners section*/
+/*  styles for partners section*/
 .partners {
     margin-top: 100px;
     margin-bottom: 80px;
 }
 .partners-container {
    display: grid;
-    grid-template-columns: 534px 360px 360px;
+    grid-template-columns: 3fr 2fr 2fr;
     grid-template-rows: 120px 130px 140px;
     grid-auto-rows: auto;
     grid-template-areas: "heading item1 item2"
@@ -264,181 +275,9 @@ grid-template-rows: 57px;
 .partners-item-5 {
     grid-area: item6;
       justify-self: end;
-      
-}
+      }
 .partners-item-6 {
     grid-area: item4;
     justify-self: end;
-   
-}
+   }
 
-
-@media screen and (max-width:1199px) {
-    body {
-        padding: 30px;
-    }
-    .promo {
-        background-position: 580px 0;
-    }
-    .header {
-        justify-content: center;
-    }
-
-    .logo-container {
-        order: 2;
-        margin: 0 30px;
-    }
-    .tel-container {
-        order: 2;
-        margin: 0 30px;
-    }
-    .main-nav {
-        order: 3;
-        margin: 30px 0;
-        width: 100%;
-    }
-    .nav-item {
-        margin-bottom: 20px;
-       
-    }
-    .section-heading {
-        font-size: 50px;
-        line-height: 1.2em;
-    }
-    .section-text {
-        font-size: 20px;
-        line-height: 1.5em;
-    }
-    .promo-img-wrapper {
-        top: 30px;
-        left: 500px;
-    }
-    .promo-img {
-        width: 80%;
-        height: 80%;
-    }
-    .promo-form-wrapper {
-        width: 350px;
-    }
-    .promo-form-tel {
-        padding: 0;
-        font-size: 18px;
-    }
-    .partners-container {
-        grid-template-columns: 2fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
-    .partners-container .section-text {
-        margin: 0;
-    }
-    .partners-item {
-        padding: 20px;
-    }
-}
-@media screen and (max-width:899px) {
-    body {
-        padding: 40px;
-        font-size: 16px;
-    }
-    .nav-item:hover {
-        font-size: 18px;
-    }
-    .section-heading {
-        font-size: 40px;
-        line-height: 1.2em;
-    }
-    .section-text {
-        font-size: 18px;
-        line-height: 1.5em;
-    }
-    .promo {
-        background-position: 430px 0;
-    }
-    .promo-img-wrapper {
-        top: 35px;
-        left: 410px;
-    }
-    .promo-img {
-        width: 70%;
-        height: 70%;
-    }
-    .promo-form-wrapper {
-        width: 40%;
-    }
-    .promo-form-tel {
-        font-size: 12px;
-    }
-    .about-us-wrapper {
-        width: 100%;
-        grid-template-rows: 60px 120px repeat(3, 1fr);
-    }
-    .about-us-img img{
-        width: 100%;
-        height: auto;
-    }
-    .partners-container  {
-        grid-template-columns: 1fr 1fr;
-        
-        grid-template-areas: "heading heading"
-        "text2 text2"
-        "item1 item2"
-        "item3 item4"
-        "item5 item6";
-    }
-    .partners-container .section-text {
-        width: 100%;
-        text-align: center;
-    }
-    .partners-container .section-heading {
-        justify-self: center;
-        }
-        .partners-container .section-heading br{
-            display: none;
-        }
-}
-@media screen and (max-width:599px) {
-    body {
-        font-size: 18px;
-}
-    .main-nav {
-        flex-direction: column;
-        width: 100%;
-    }
-    .nav-item {
-        text-align: center;
-        margin-right: 0;
-
-    }
-    .nav-item:hover {
-        font-size: 20px;
-        font-weight: bold;
-    }
-    .section-heading {
-        font-size: 30px;
-    }
-    .promo {
-        background-position: 330px 0;
-    }
-    .promo-img-wrapper {
-        top: 35px;
-        left: 290px;
-    }
-    .promo-img {
-        width: 50%;
-        height: 50%;
-    }
-    .promo-form-tel {
-        font-size: 10px;
-    }
-    .promo-form-btn {
-        padding: 0 30px;
-    }
-    .about-us-wrapper {
-    grid-template-areas:
-    "heading heading"
-    "text text"
-    "picture item1"
-    "picture item2"
-    "item3 item3";
-    }
-}
